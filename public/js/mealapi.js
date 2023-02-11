@@ -10,7 +10,7 @@ const Meal = async function (schoolname,schoolRegion,schoolGrade,mealDate) {
     console.log(meal)
     meal = meal.substr(5)
     console.log(temp)
-    meal = temp.split(" ");
+    meal = meal.split(" ");
     meal = meal[0]
     
     return meal;
