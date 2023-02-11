@@ -6,10 +6,13 @@ const Meal = async function (schoolname,schoolRegion,schoolGrade,mealDate) {
     await school.init(School.Type[schoolGrade], School.Region[schoolRegion], result[0].schoolCode);
     const [year, month, date] = mealDate.split('-');
     const data = await school.getMeal(year,month);
-    const meal = data[date]
-    const temp = meal.substr(5)
-    const mealdata = temp.split(" ");
+    let meal = data[date]
+    console.log(meal)
+    meal = meal.substr(5)
+    console.log(temp)
+    meal = temp.split(" ");
+    meal = meal[0]
     
-    return mealdata;
+    return meal;
 }
 module.exports = {Meal};
