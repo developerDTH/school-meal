@@ -7,12 +7,9 @@ const Meal = async function (schoolname,schoolRegion,schoolGrade,mealDate) {
     const [year, month, date] = mealDate.split('-');
     const data = await school.getMeal(year,month);
     let meal = data[date]
-    console.log(meal)
     meal = meal.substr(5)
-    console.log(temp)
     meal = meal.split(" ");
     meal = meal[0]
-    
     return meal;
 }
 module.exports = {Meal};
