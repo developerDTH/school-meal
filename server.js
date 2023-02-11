@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 app.get("/:schoolName/:region/:grade/:date", async (req, res) => {
   // let data=mealapi.schoolMeal(req.params.schoolName,req.params.region,req.params.grade,req.params.date);
   let data = await Meal(req.params.schoolName,req.params.region,req.params.grade,req.params.date)
-  res.send(data);
+  res.json(data);
 });
 
 app.listen(PORT,()=>{
