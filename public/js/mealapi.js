@@ -8,9 +8,9 @@ const Meal = async function (schoolname,schoolRegion,schoolGrade,mealDate) {
     const data = await school.getMeal(year,month);
     let meal = data;
     if (date != undefined){
-      meal = data[date]
+        meal = meal[date]
       // meal = meal.substr(5)
-      meal = meal.split(" ");
+        meal = meal.split(" ");
       meal = meal[0] 
       return meal;
     }
